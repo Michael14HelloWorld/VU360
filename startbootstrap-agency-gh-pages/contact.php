@@ -1,7 +1,7 @@
 <?php
 
 // configure
-$from = $email;
+$from = "bgmichael400@gmail.com";
 $sendTo = 'bgmichael1400@gmail.com';
 $subject = 'New message from contact form';
 $fields = array('name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'message' => 'Message'); // array variable name => Text to appear in email
