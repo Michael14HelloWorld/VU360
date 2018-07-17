@@ -2,7 +2,7 @@ body,html{width:100%;height:100%}body{font-family:Merriweather,'Helvetica Neue',
 
 hr.light{border-color:#fff}a{color:#70e057;-webkit-transition:all .2s;-moz-transition:all .2s;transition:all .2s}a:hover{color:#70e057}h1,h2,h3,h4,h5,h6{font-family:'Open Sans','Helvetica Neue',Arial,sans-serif}
 
-.bg-primary{background-color:#70e057!important}
+.bg-primary{background-color:#212529!important}
 
 .bg-dark{background-color:#212529!important}
 
