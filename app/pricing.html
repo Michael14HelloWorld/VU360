@@ -41,6 +41,45 @@
         margin: auto;
         width: 40%;
     }
+    
+        .accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        padding: 20px;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+    }
+    
+    .active, .accordion:hover {
+        background-color: #ccc;
+    }
+    
+    .accordion:after {
+        content: '\002B';
+        color: #777;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+    }
+    
+    .active:after {
+        content: "\2212";
+    }
+    
+    .panel {
+        padding: 0 18px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+    
     </style>
 
     <meta charset="utf-8">
@@ -136,31 +175,50 @@
           </div>
           <div class="col-lg-8 mx-auto">
             <p class="text-faded mb-5">The best price for your needs!</p>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#findoutmore">Find Out More</a>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#pricing">Find Out More</a>
           </div>
         </div>
       </div>
     </header>
     
-    <section class="bg-dark text-white">
+    <section class="bg-dark text-white" id="pricing">
       <div class="container text-center">
         
-        <h4 style="text-align: center">For real estate, our price depends on the factors below. </h4><br>
+        <h4 style="text-align: center">For real estate, our price depends on the following factors... </h4><br>
         
         <hr class="light my-4">
-      
-        <h4>The price and size of the property.</h4> <p class="text-faded mb-4"></p><br><br>
-        <h4>The time of day.</h4> <p class="text-faded mb-4">Sunrise and sunset are the best times of day to capture stunning aerial footage. With the angle of the sun just right, it makes your videos look all the more dazzling!
-          If you want a shoot done either at sunrise or sunset, we charge an additional fee of $150, making your shoot top priority!</p><br><br>
-        <h4>The resolution of your footage.</h4> <p class="text-faded mb-4">By default, your videos will come in 1080p resolution. If you would like to upgrade and get ultra crisp 4K videos, we charge $250 more.</p><br><br>
-        <h4>The length of the video we make for you.</h4> <p class="text-faded mb-4">A longer video takes longer to make. We offer 60s, 90s, or a video length of your choice of fully edited and color graded video showcasing your property in a gorgeous and cinematic way!</p><br><br>
-        <h4>Photos + Videos</h4> <p class="text-faded mb-4"> We primarily do video, but if you request photos as well, that will be at an additional cost.</p><br><br>
         
-        <hr class="light my-4">
-        <br><br><h4>For example<br></h4><p class="text-faded mb-4">* A $700K house with a 60s video could cost $600. However, if the house is shot in 4K at sunrise or sunset, the price would be 
-        $1000.</p>
-        </p>
-        <br><br><p style="font-size: 50%;">* Each house varies. Factors include the price and size of the property.</p>
+        <br><br>
+        
+        <button class="accordion" >The price and size of the property.</button>
+        <div class="panel" style="color: black;">
+          <p>The price and size of a property is the biggest factor in price. Contact us to get your free estimate now!</p>
+        </div>
+        <br>
+        
+        <button class="accordion">The time of day.</button>
+        <div class="panel" style="color: black;">
+          <p>Sunrise and sunset are the best times of day to capture stunning aerial footage. With the angle of the sun just right, it makes your videos look all the more dazzling!
+          If you want a shoot done either at sunrise or sunset, we charge an additional fee of $150, making your shoot top priority!</p>
+        </div>
+        <br>
+        
+        <button class="accordion">The resolution of your footage.</button>
+        <div class="panel" style="color: black;">
+          <p>By default, your videos will come in 1080p resolution. If you would like to upgrade and get ultra crisp 4K videos, we charge $250 more.</p>
+        </div>
+        <br>
+        
+        <button class="accordion">The length of the video we make for you.</button>
+        <div class="panel" style="color: black;">
+          <p>A longer video takes longer to make. We offer 60s, 90s, or a video length of your choice of fully edited and color graded video showcasing your property in a gorgeous and cinematic way!</p>
+        </div>
+        <br>
+        
+        <button class="accordion">Photos + Videos</button>
+        <div class="panel" style="color: black;">
+          <p>We primarily do video, but if you request photos as well, that will be at an additional cost.</p>
+        </div>
       </div>
     </section>
     
@@ -182,7 +240,7 @@
           <div class="col-lg-4 mr-auto text-center">
             <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
             <p>
-              <a href="mailto:vu360pro@gmail.com">vu360pro@gmail.com</a>
+              <a href="mailto:vu360pro@gmail.com">info@vu360.co</a>
             </p>
           </div>
         </div>
@@ -201,6 +259,24 @@
       
     </section>
     
+    
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight){
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+          });
+        }
+    </script>
+        
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
