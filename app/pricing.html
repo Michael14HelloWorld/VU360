@@ -42,6 +42,45 @@
         margin: auto;
         width: 40%;
     }
+    
+        .accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        padding: 20px;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+    }
+    
+    .active, .accordion:hover {
+        background-color: #ccc;
+    }
+    
+    .accordion:after {
+        content: '\002B';
+        color: #777;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+    }
+    
+    .active:after {
+        content: "\2212";
+    }
+    
+    .panel {
+        padding: 0 18px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+    
     </style>
 
     <meta charset="utf-8">
@@ -110,17 +149,14 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="logo.png" alt="Logo" width="140px" height="40px"></a>
+        <a class="navbar-brand js-scroll-trigger" href="/app/index.html"><img src="logo.png" alt="Logo" width="140px" height="40px"></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="/#services">Our Promise</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="/pricing">Pricing</a>
+              <a class="nav-link js-scroll-trigger" href="#">Pricing</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="/#contact">Contact</a>
@@ -129,12 +165,17 @@
         </div>
       </div>
     </nav>
+<<<<<<< HEAD
+=======
+
+>>>>>>> pricing
     
     <header class="masthead text-center text-white d-flex">
       <div class="container my-auto">
         <div class="row">
           <div class="col-lg-10 mx-auto">
             <h1 class="text-uppercase">
+<<<<<<< HEAD
               <h1>Pricing</h1>
             </h1>
             <p class="text-uppercase" style="font-size: 250%">Coming Soon</p>
@@ -143,42 +184,117 @@
           <div class="col-lg-8 mx-auto">
             <p id="demo" style="font-size:30px"></p>
           </div>
+=======
+              <strong>Pricing</strong>
+            </h1>
+            <!--<p class="text-uppercase" style="font-size: 250%">Drone Photography & Videography</p>-->
+            <hr>
+          </div>
+          <div class="col-lg-8 mx-auto">
+            <p class="text-faded mb-5">The best price for your needs!</p>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#pricing">Find Out More</a>
+          </div>
+>>>>>>> pricing
         </div>
       </div>
     </header>
     
-    <script>
-        // Set the date we're counting down to
-        var countDownDate = new Date("Oct 27, 2018 12:00:00").getTime();
+    <section class="bg-dark text-white" id="pricing">
+      <div class="container text-center">
         
-        // Update the count down every 1 second
-        var countdownfunction = setInterval(function() {
+        <h4 style="text-align: center">For real estate, our price depends on the following factors... </h4><br>
         
-            // Get todays date and time
-            var now = new Date().getTime();
-            
-            // Find the distance between now an the count down date
-            var distance = countDownDate - now;
-            
-            // Time calculations for days, hours, minutes and seconds
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-            // Output the result in an element with id="demo"
-            document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-            + minutes + "m " + seconds + "s ";
-            
-            // If the count down is over, write some text 
-            if (distance < 0) {
-                clearInterval(countdownfunction);
-                document.getElementById("demo").innerHTML = "EXPIRED";
-            }
-        }, 1000);
-    </script>
-
+        <hr class="light my-4">
+        
+        <br><br>
+        
+        <button class="accordion" >The price and size of the property.</button>
+        <div class="panel" style="color: black;">
+          <br><p>The price and size of a property is the biggest factor in price. Contact us to get your free estimate now!</p><br>
+        </div>
+        <br>
+        
+        <button class="accordion">The time of day.</button>
+        <div class="panel" style="color: black;">
+          <br><p>Sunrise and sunset are the best times of day to capture stunning aerial footage. With the angle of the sun just right, it adds that extra layer of cinematic look and feel!
+          If you want a shoot done either at sunrise or sunset, we charge an additional fee of $150, making your shoot top priority!</p><br>
+        </div>
+        <br>
+        
+        <button class="accordion">The resolution of your footage.</button>
+        <div class="panel" style="color: black;">
+          <br><p>By default, your videos will come in 1080p resolution. If you would like to upgrade and get ultra crisp 4K videos, we charge $250 more.</p><br>
+        </div>
+        <br>
+        
+        <button class="accordion">The length of the video we make for you.</button>
+        <div class="panel" style="color: black;">
+          <br><p>A longer video takes longer to make. We offer 60s, 90s, or a video length of your choice of fully edited and color graded video showcasing your property in a gorgeous and cinematic way!</p><br>
+        </div>
+        <br>
+        
+        <button class="accordion">Photos + Videos</button>
+        <div class="panel" style="color: black;">
+          <br><p>We primarily do video, but if you request photos as well, that will be at an additional cost.</p><br>
+        </div>
+      </div>
+    </section>
     
+    
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">Let's Get In Touch!</h2>
+            <hr class="my-4">
+            <p class="mb-5">Want to work with us? That's great! We will get back to you as soon as possible!</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto text-center">
+            <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
+            <p>941-600-8623</p>
+          </div>
+          <div class="col-lg-4 mr-auto text-center">
+            <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
+            <p>
+              <a href="mailto:vu360pro@gmail.com">info@vu360.co</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section style="width: 100%; height: 100px; background-color: #212529">
+      
+      <div class="social" style="text-align: center">
+        <a href="https://www.facebook.com/vu360drone/" target="_blank"><i class="fa fa-facebook-f fa-2x" style="color: white; padding: 10px;"></i></a>
+        <a href="https://twitter.com/vu360drone" target="_blank"><i class="fa fa-twitter fa-2x" style="color: white; padding: 10px;"></i></a>
+        <a href="https://www.youtube.com/channel/UCpfIfnawLxVVa3RGXY8h_sw" target="_blank"><i class="fa fa-youtube fa-2x" style="color: white; padding: 10px;"></i></a>
+      </div>
+      
+      <br><br><p style="padding-bottom: 3; color: white; text-align: center; font-size: 70%">Copyright (C) 2018 VU360. Made by <a href="https://github.com/Michael14HelloWorld" target="_blank">Michael Groff</a></p>
+      
+    </section>
+    
+    
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight){
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+          });
+        }
+    </script>
+        
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
